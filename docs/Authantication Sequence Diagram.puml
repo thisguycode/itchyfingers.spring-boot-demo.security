@@ -1,0 +1,8 @@
+@startuml
+Client -> AuthController: POST /api/login
+AuthController -> AuthService: authenticate(LoginRequest)
+AuthService -> AuthenticationManager: authenticate
+AuthenticationManager -> AuthService: Return Authentication object
+AuthService -> SecurityContextHolder: getContext().setAuthentication(authentication)
+AuthService -> Client: Return AuthTokenResponse
+@enduml

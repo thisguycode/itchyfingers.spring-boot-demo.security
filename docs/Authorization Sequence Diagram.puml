@@ -1,0 +1,8 @@
+@startuml
+Client -> OncePerRequestFilter: Authorization Bearer JWT-TOKEN
+OncePerRequestFilter -> AuthService: authorize(jwt)
+AuthService -> AuthService: Get username from token
+AuthService -> CustomUserDetailsService: loadUserByUsername(username)
+CustomUserDetailsService -> AuthService: Return UserDetails
+AuthService -> SecurityContextHolder: getContext().setAuthentication(authentication)
+@enduml
