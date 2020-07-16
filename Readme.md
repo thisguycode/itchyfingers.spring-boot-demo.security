@@ -8,6 +8,6 @@ To get the idea of this demo, see the sequence diagrams from the following direc
 - `docs/*`
 
 ## Resource
-A lost of resources are available out there to understand Spring Securith and JWT. But following resources are really recommand.
+A lot of resources are available out there to understand Spring Securith and JWT. But following resources are really recommand.
 
 - https://github.com/rmitula/spring-security-jwt
